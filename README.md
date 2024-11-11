@@ -3,8 +3,8 @@
 
 ### 1️⃣ ЕСЛИ (IF)
 Допустим что мы хотим установить скидку 3% на все автомобили, пробег которых превышает 100 000 км, в этом нам поможет функция ЕСЛИ.
-Вставим пустой столбец между столбцами price и mileage, назовем его sale_price.
-Во вторую строку нового столбца запишем формулу  
+Создадим новый столбец между столбцами price и mileage, назовем его sale_price.
+Во вторую строку нового столбца запишем формулу:  
 #### <h3 align="center">``` =ЕСЛИ(I2>100000;G2*0,97;G2) ```</h3>  
 где:  
 - I2>100000 - условие поиска (цена более 100000)  
@@ -40,7 +40,34 @@
 Результат: 212250
 <h3 align="center"><img src="https://github.com/georgelasenkov/EXCEL/blob/main/sumifs.png"></h3>
 
-### 4️⃣ 
+### 4️⃣ ВПР (VLOOKUP)
+Для каждой модели автомобиля из таблицы vehicles добавить марку этой модели из таблицы brands. Основывать поиск будем по столбцу brand_id в таблице vehicles.  
+Формула:  
+#### <h3 align="center">``` =ВПР($C2;brands!$A$1:$C$23;2) ```</h3>  
+- где $C2 - айди марки авто, который мы будем искать в таблице brands
+- brands!$A$1:$C$23 - таблица brands, в которой будем осуществлять поиск нужного айди
+- 2 - столбец в таблице brands, из которого нужно вернуть значение
+
+Применяем формулу, двойным кликом по маркеру автозаполнения применим эту формулу ко всем остальным ячейкам в столбце.
+Результат:  
+<h3 align="center"><img src="https://github.com/georgelasenkov/EXCEL/blob/main/vlookup.png"></h3>
+
+### 5️⃣ СВОДНАЯ ТАБЛИЦА (PIVOT TABLE)
+Создадим сводную таблицу по нашей табличке vehicles
+В колонку со строками добавим параметры body_type и model, в значения добавим параметры price и mileage.
+Получится следующая табличка:  
+<h3 align="center"><img src="https://github.com/georgelasenkov/EXCEL/blob/main/pivot1_1.png"></h3>  
+Мы можем раскрыть любой тип кузова и посмотреть данные для конкретной модели в этом типе кузова:  
+<h3 align="center"><img src="https://github.com/georgelasenkov/EXCEL/blob/main/pivot1_2.png"></h3>  
+Уберем параметр model, теперь у нас в табличке осталась информация по типам кузова, их средней цене и среднему пробегу:  
+<h3 align="center"><img src="https://github.com/georgelasenkov/EXCEL/blob/main/pivot2_1.png"></h3>  
+Сделаем двойной клик на любой ячейке в строке hatchback - на новом листе создается новая сводная таблица со всеми моделями авто, которые принадлежат кузову хэтчбек, а также вся информация по каждой модели:  
+<h3 align="center"><img src="https://github.com/georgelasenkov/EXCEL/blob/main/pivot2_2.png"></h3>  
+Вверху, в названии каждого столбца есть флажок с фильтрами, выберем только бензиновые хэтчбеки в столбце типа топлива:  
+<h3 align="center"><img src="https://github.com/georgelasenkov/EXCEL/blob/main/pivot2_3.png"></h3>  
+
+
+
 
 <div align="center">
   <img height="300" width="450" src="https://media.tenor.com/Dh7CxUiogBMAAAAi/vev-veve.gif"  />
