@@ -65,10 +65,3 @@
 <h3 align="center"><img src="https://github.com/georgelasenkov/EXCEL/blob/main/pivot2_2.png"></h3>  
 Вверху, в названии каждого столбца есть флажок с фильтрами, выберем только бензиновые хэтчбеки в столбце типа топлива:  
 <h3 align="center"><img src="https://github.com/georgelasenkov/EXCEL/blob/main/pivot2_3.png"></h3>  
-
-
-
-
-<div align="center">
-  <img height="300" width="450" src="https://media.tenor.com/Dh7CxUiogBMAAAAi/vev-veve.gif"  />
-</div>
